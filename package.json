@@ -1,0 +1,17 @@
+{
+  "name": "htmx",
+  "version": "1.0.0",
+  "description": "A monolith project using htmx and express",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "start": "node ./server/index.js"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
