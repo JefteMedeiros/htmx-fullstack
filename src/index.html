@@ -3,13 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="/src/htmx.js"
-    ></script>
-    <link href="/dist/output.css" rel="stylesheet">
-    <title>HTML</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <title>Task Manager</title>
   </head>
-  <body>
-    <p>HTMX Express project</p>
+  <body class="bg-gray-100">
+    <div class="max-w-[400px] ml-4 py-8 space-y-8">
+      <h1 class="text-3xl font-semibold mb-4">Task Manager</h1>
+      <form class="flex gap-2" hx-post="/addTask" hx-target="#task-list">
+        <input
+          type="text"
+          name="q"
+          class="rounded-l p-2 flex-1"
+          placeholder="Add a task"
+        />
+        <button
+          type="submit"
+          class="bg-blue-200 text-white px-4 py-2 rounded-r"
+        >
+          Add
+        </button>
+      </form>
+      <form class="flex gap-2" hx-post="/addTask" hx-target="#task-list">
+        <ul id="task-list" class="mt-4">
+        </ul>
+      </form>
+    </div>
+    <script src="./htmx.js"></script>
   </body>
 </html>
